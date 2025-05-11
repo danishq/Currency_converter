@@ -26,41 +26,57 @@ class CurrencyConverterMaterial extends StatelessWidget {
                 ),
               ),
 
-              TextField(
-                style: TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0),
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: TextField(
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 14,
+                    fontWeight: FontWeight.normal,
+                  ),
+
+                  decoration: InputDecoration(
+                    hintText: 'Please enter the amount in USD',
+                    hintStyle: TextStyle(
+                      color: Color.fromARGB(200, 60, 134, 149),
+                    ),
+                    prefixIcon: Icon(Icons.monetization_on),
+                    prefixIconColor: Color.fromARGB(255, 0, 0, 0),
+                    filled: true,
+                    fillColor: Colors.white,
+
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: const Color.fromARGB(255, 30, 61, 155),
+                        width: 2.0,
+                        style: BorderStyle.solid,
+                      ),
+
+                      borderRadius: BorderRadius.all(Radius.circular(40)),
+                    ),
+
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: const Color.fromARGB(255, 72, 158, 46),
+                        width: 2.0,
+                        style: BorderStyle.solid,
+                      ),
+
+                      borderRadius: BorderRadius.all(Radius.circular(40)),
+                    ),
+                  ),
                 ),
-
-                decoration: InputDecoration(
-                  hintText: 'Please enter the amount in USD',
-                  hintStyle: TextStyle(
-                    color: Color.fromARGB(200, 60, 134, 149),
-                  ),
-                  prefixIcon: Icon(Icons.monetization_on),
-                  prefixIconColor: Color.fromARGB(255, 0, 0, 0),
-                  filled: true,
-                  fillColor: Colors.white,
-
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: const Color.fromARGB(255, 30, 61, 155),
-                      width: 2.0,
-                      style: BorderStyle.solid,
-                    ),
-
-                    borderRadius: BorderRadius.all(Radius.circular(40)),
-                  ),
-
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: const Color.fromARGB(255, 72, 158, 46),
-                      width: 2.0,
-                      style: BorderStyle.solid,
-                    ),
-
-                    borderRadius: BorderRadius.all(Radius.circular(40)),
+              ),
+              TextButton(
+                onPressed: () {
+                  print('Button clicked');
+                },
+                child: const Text(
+                  'Click Here',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 187, 22, 22),
                   ),
                 ),
               ),
