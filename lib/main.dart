@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:currency_converter/currency_converter_material.dart';
+import 'package:currency_converter/currency_converter.dart';
 
 void main(){
-  runApp(const MyApp());
+  runApp(CurrencyConvertorApp());
 }
 
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
-  //const MyApp ({Key? key}) : super(key: key); 
+class CurrencyConvertorApp extends StatelessWidget {
+  const CurrencyConvertorApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home:CurrencyConverterMaterial(),
+    return  MaterialApp(
+      theme: ThemeData.dark(
+        useMaterial3: true,
+      ),
+      home: CurrencyConverter(),
     );
   }
 }
